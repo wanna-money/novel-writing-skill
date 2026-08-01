@@ -1,6 +1,6 @@
 ---
-name: novel-writing
-description: Use when the user wants to plan, outline, draft, or revise fiction across any genre (sci-fi, xianxia, urban fantasy, webnovel) or length (short/medium/long). Covers the full pipeline from concept to prose: worldbuilding, character design, multi-tier outline, chapter drafting, anti-AI prose style, foreshadowing tracking, and cross-chapter continuity management.
+name: novel-write
+description: Use when the user wants to plan, outline, draft, or revise fiction across any genre (sci-fi, xianxia, urban fantasy, webnovel) or length (short/medium/long). Covers the full pipeline from concept to prose: worldbuilding, character design, multi-tier outline, chapter drafting, anti-AI prose style, foreshadowing tracking, and cross-chapter continuity management. 完成写作后可衔接 novel-deslop（去AI味）与 novel-review（多视角审查）。
 metadata:
   author: wanna-money
   version: "2.1"
@@ -198,6 +198,22 @@ metadata:
 | 都市奇幻 | 热叙事 | 幽默包裹残酷，笑声最密处插刀 | 吐槽层→真情层→哲思层 |
 | 玄幻修仙 | 古雅叙事 | 半文半白，渲染与留白交替 | 环境即情感隐喻 |
 | 西式奇幻 | 史诗叙事 | 仪式感描写，命运感营造 | 行为>独白>对话>告白 |
+
+### 子 Agent 协作（可选加速）
+
+如果当前环境已注册 `outline-architect` 和 `narrative-writer` 子 agent（Claude Code 会话启动时从插件 `agents/` 目录自动加载为 `subagent_type`），可在以下节点委派：
+
+- **阶段二～四（世界观/人物/大纲）**：可 spawn `Agent(subagent_type: "outline-architect", prompt: "...")` 辅助结构设计，减轻主线程负担。
+- **阶段五（章节写作）**：可 spawn `Agent(subagent_type: "narrative-writer", prompt: "...")` 执行正文写作，它同时承担去AI味的 Gate A-F 改写能力。
+
+**降级规则**：若 Agent/Task 工具不可用，或 spawn 失败，由主线程直接按本文件方法论执行，不阻塞写作流程。子 agent 是加速手段，不是必需依赖。
+
+### 写完之后
+
+每章写完，建议按顺序衔接：
+1. `novel-deslop` — 去除 AI 味（禁用词、套路句式、心理外化等）
+2. `novel-review` — 多视角审查（结构/文字/一致性），获取 S1-S4 分级报告
+3. 按报告返回本 skill 修改结构/情节问题，或转 `novel-deslop` 修改文字问题
 
 ---
 

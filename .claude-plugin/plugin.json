@@ -1,11 +1,11 @@
 {
   "name": "novel-writing",
-  "version": "1.0.0",
-  "description": "Universal novel writing methodology covering sci-fi, fantasy, xianxia, and urban fantasy genres. Includes worldbuilding, character design, anti-AI writing techniques, and cross-chapter continuity management.",
+  "version": "2.0.0",
+  "description": "Universal novel writing toolkit covering sci-fi, fantasy, xianxia, and urban fantasy genres. Three coordinated skills: novel-write (six-phase methodology: worldbuilding, characters, outline, prose), novel-deslop (AI-taste detection and removal with deterministic scripts), and novel-review (multi-angle structural/prose/consistency review). Includes three shared subagents for structure design, prose execution, and consistency checking.",
   "author": {
     "name": "yangyunlong11"
   },
   "repository": "https://github.com/yangyunlong11/novel-writing-skill",
   "license": "MIT",
-  "keywords": ["novel", "writing", "fiction", "sci-fi", "fantasy", "xianxia", "methodology"]
+  "keywords": ["novel", "writing", "fiction", "sci-fi", "fantasy", "xianxia", "methodology", "deslop", "review", "anti-ai-writing"]
 }
