@@ -1,0 +1,11 @@
+{
+  "name": "novel-writing",
+  "version": "1.0.0",
+  "description": "Universal novel writing methodology covering sci-fi, fantasy, xianxia, and urban fantasy genres. Includes worldbuilding, character design, anti-AI writing techniques, and cross-chapter continuity management.",
+  "author": {
+    "name": "yangyunlong11"
+  },
+  "repository": "https://github.com/yangyunlong11/novel-writing-skill",
+  "license": "MIT",
+  "keywords": ["novel", "writing", "fiction", "sci-fi", "fantasy", "xianxia", "methodology"]
+}
